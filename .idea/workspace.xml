@@ -2,12 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f1ab71d9-27f6-403e-93a6-e5ecd182bcab" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/prog22-23/Doctor/Doctor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/prog22-23/Doctor/FamilyDoctor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/prog22-23/Doctor/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/prog22-23/Doctor/Surgeon.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/prog22-23/InherencieAndVisibility/Exercises1/A.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/prog22-23/InherencieAndVisibility/Exercises1/B.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/prog22-23/InherencieAndVisibility/Exercises1/C.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/prog22-23/InherencieAndVisibility/Exercises1/OOpExercises.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InherencieAndVisibility/Exercises1/A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InherencieAndVisibility/Exercises1/B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InherencieAndVisibility/Exercises1/C.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InherencieAndVisibility/Exercises1/OOpExercises.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -22,12 +41,32 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration name="OOpExercises" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InherencieAndVisibility.Exercises1.OOpExercises" />
+      <module name="prog22-23" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="InherencieAndVisibility.Exercises1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.OOpExercises" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
