@@ -9,7 +9,20 @@ public class Item {
         this.title=t;
         this.author=a;
     }
+    public int getCode() {
+        return code;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
     public void show(){
-        System.out.println();
+        System.out.println("Code: " + code);
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
     }
 }

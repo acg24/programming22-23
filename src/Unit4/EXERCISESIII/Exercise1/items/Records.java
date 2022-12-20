@@ -7,8 +7,15 @@ public class Records {
             super(code, title, author);
             this.discography=d;
         }
+        @Override
         public void show(){
-            System.out.println();
+            System.out.println("Code: " + this.code);
+            System.out.println("Title: " + this.title);
+            System.out.println("Author: " + this.author);
+            System.out.println("Discography" + this.discography);
+        }
+        ublic String getDiscography() {
+            return discography;
         }
     }
 }
