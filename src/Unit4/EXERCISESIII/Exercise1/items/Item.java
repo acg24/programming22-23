@@ -1,6 +1,6 @@
 package Unit4.EXERCISESIII.Exercise1.items;
 
-public class Item {
+public abstract class Item {
     private int code;
     private String title;
     private String author;
