@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f1ab71d9-27f6-403e-93a6-e5ecd182bcab" name="Changes" comment="InherencieAndVisibility and OOpExercises creation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Unit4/EXERCISESIII/Exercise1/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Unit4/EXERCISESIII/Exercise1/items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Unit4/EXERCISESIII/Exercise1/orders/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Unit4/EXERCISESIII/Exercise1/orders/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prog22-23.iml" beforeDir="false" afterPath="$PROJECT_DIR$/prog22-23.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +33,13 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="OOpExercises" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="InherencieAndVisibility.Exercises1.OOpExercises" />
