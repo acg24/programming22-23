@@ -1,4 +1,4 @@
-package InherencieAndVisibility.Exercises1;
+package Unit4.InherencieAndVisibility.Exercises1;
 
 public class C extends B {
     private int a = 543;

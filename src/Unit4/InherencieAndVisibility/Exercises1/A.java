@@ -1,4 +1,4 @@
-package InherencieAndVisibility.Exercises1;
+package Unit4.InherencieAndVisibility.Exercises1;
 
 public class A {
     int a = 100;

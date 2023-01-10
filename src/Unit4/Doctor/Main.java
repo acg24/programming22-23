@@ -1,4 +1,4 @@
-package Doctor;
+package Unit4.Doctor;
 
 public class Main {
     public static void main(String[] args) {
