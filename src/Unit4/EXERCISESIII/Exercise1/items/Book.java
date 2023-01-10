@@ -1,7 +1,7 @@
 package Unit4.EXERCISESIII.Exercise1.items;
 
-public class Book extends Item {
-    private int numPages;
+public class Book  {
+    /*private int numPages;
     public Books(int n, int c, String t, String a){
         super(code, title, author);
         this.numPages=n;
@@ -16,4 +16,5 @@ public class Book extends Item {
     public void fullCode(){
         System.out.println(this.code + this.title + this.numPages);
     }
+     */
 }

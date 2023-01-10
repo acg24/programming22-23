@@ -18,6 +18,12 @@ public class Bird {
     public static int getNumBirds() {
         return numBirds;
     }
+    public char getSex(){
+        return this.sex;
+    }
+    public int getAge(){
+        return this.age;
+    }
 
     // Method to display the values of the instance attributes
     public void whoAmI() {

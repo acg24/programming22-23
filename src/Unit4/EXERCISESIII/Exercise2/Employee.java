@@ -5,8 +5,6 @@ public abstract class Employee {
     private String lastname;
     private int ssn;
     public abstract float earning();
-    public String toString(){
 
-    }
 
 }

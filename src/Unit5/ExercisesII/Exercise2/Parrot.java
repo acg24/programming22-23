@@ -2,7 +2,7 @@ package Unit5.ExercisesII.Exercise2;
 
 public class Parrot extends Bird{
     // Instance attributes
-    private char region;
+    char region;
     private String colour;
 
     // Constructor to initialize instance attributes inherited from superclass and region and colour
@@ -31,5 +31,9 @@ public class Parrot extends Bird{
                 System.out.println("Invalid region.");
                 break;
         }
+    }
+    public String show(){
+       String result=(super.getSex() + ", " + super.getAge() + ", " + this.region + ", " +  this.colour);
+       return result;
     }
 }

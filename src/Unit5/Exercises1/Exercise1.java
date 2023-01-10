@@ -1,5 +1,5 @@
 package Unit5.Exercises1;
-
+import java.util.Scanner;
 public class Exercise1 {
     public static void main (String[] args){
         int[] numbers = new int[10];

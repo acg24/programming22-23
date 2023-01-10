@@ -1,8 +1,8 @@
 package Unit4.EXERCISESIII.Exercise3;
 
-public class Canary {
+public class Canary  extends Bird{
     // Instance attribute
-    private double size;
+    double size;
 
     // Constructor to initialize instance attributes inherited from superclass and size
     public Canary(char sex, int age, double size) {

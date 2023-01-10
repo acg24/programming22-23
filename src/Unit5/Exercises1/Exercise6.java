@@ -1,5 +1,5 @@
 package Unit5.Exercises1;
-
+import java.util.Scanner;
 public class Exercise6 {
     public static int[] createArray() {
         Scanner s0 = new Scanner(System.in);

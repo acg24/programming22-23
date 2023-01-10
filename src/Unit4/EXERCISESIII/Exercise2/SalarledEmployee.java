@@ -1,13 +1,10 @@
 package Unit4.EXERCISESIII.Exercise2;
 
-public class SalarledEmployee extends Employee{
+public class SalarledEmployee {
     private double weeklysalary;
     public void earning(){
 
     }
-    @Override
-    Public String toString(){
 
-    }
 }
 

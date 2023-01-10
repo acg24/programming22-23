@@ -1,8 +1,8 @@
 package Unit4.EXERCISESIII.Exercise3;
 
-public class Parrot {
+public class Parrot extends Bird{
     // Instance attributes
-    private char region;
+    char region;
     private String colour;
 
     // Constructor to initialize instance attributes inherited from superclass and region and colour

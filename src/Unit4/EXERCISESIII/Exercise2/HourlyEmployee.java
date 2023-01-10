@@ -1,6 +1,6 @@
 package Unit4.EXERCISESIII.Exercise2;
 
-public class HourlyEmployee extends Employee {
+public class HourlyEmployee  {
     private double grosssales;
     private double commissionrate;
     public HourlyEmployee(double g, double c){
@@ -8,11 +8,6 @@ public class HourlyEmployee extends Employee {
 
         }
     }
-    public void earning(){
 
-    }
-    @Override
-    Public String toString(){
 
-    }
 }

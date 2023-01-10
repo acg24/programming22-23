@@ -1,5 +1,5 @@
 package Unit5.Exercises1;
-
+import java.util.Scanner;
 public class Exercise3 {
     public static void main (String[] args){
         Scanner s0 = new Scanner(System.in);
