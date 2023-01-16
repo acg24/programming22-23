@@ -1,13 +1,12 @@
 package Unit5.ExercisesIV.Exercise2;
 
 public class UnevenMatrix {
-    Float[][] nums;
+    private Float[][] nums;
     int nr=4;
-    public UnevenMatrix(){
-        this.nums= new Float[nr][];
-    }
-    public UnevenMatrix(int nr){
-        this.nums= new Float[nr][];
+    public UnevenMatrix(){ this.nums= new Float[nr][]; }
+    public UnevenMatrix(int num){
+        this.nums= new Float[num][];
+        this.nr=num;
     }
 
     public void loadRow(Float[] fl, int row){
@@ -17,7 +16,11 @@ public class UnevenMatrix {
             }
         }
     }
-
+    public void displayRow(int row) {
+        for (int i = 0; i < this.nums[row].length; i++) {
+            System.out.println(this.nums[row][i] + ", ");
+        }
+    }
     public void displayMatrix(){
         int j=0;
         for (int i=0;i<this.nr;i++){
