@@ -34,6 +34,11 @@ public class UnevenMatrix {
     }
 
     public static void main(String[] args) {
-
+        UnevenMatrix uneM= new UnevenMatrix();
+        Float[] fl0 =new Float[]{1f,3f,9f,27f,729f};
+        Float[] fl1 =new Float[]{17f,33f,22f,20f,15f};
+        uneM.loadRow(fl0,5);
+        uneM.loadRow(fl1,5);
+        uneM.displayMatrix();
     }
 }
