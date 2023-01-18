@@ -1,6 +1,9 @@
 package Unit5.ExercisesV.Exercise2;
+import java.lang.Comparable;
+import java.util.Iterator;
+import java.util.Objects;
 
-public class Point {
+public class Point implements Comparable<Point>{
     private int x;
     private int y;
     public Point(int X, int Y){
@@ -26,5 +29,16 @@ public class Point {
     public String toString(){
         String result=("The point is: " + this.x + ", " + this.y);
         return result;
+    }
+    @Override
+    public int compareTo(Point p0) {
+        if (this.x == p0.x && this.y == p0.y) {
+            return 0;
+        } else {
+            return -1;
+        }
+    }
+    public int hashCode() {
+        return Objects.hash(this.x,this.y);
     }
 }
