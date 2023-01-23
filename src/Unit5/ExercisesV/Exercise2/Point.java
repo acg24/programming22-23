@@ -30,6 +30,16 @@ public class Point implements Comparable<Point>{
         String result=("The point is: " + this.x + ", " + this.y);
         return result;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Point){
+            Point p0 = (Point) obj;
+            return this.x == p0.x && this.y == p0.y;
+        }
+        return false;
+    }
+
     @Override
     public int compareTo(Point p0) {
         if (this.x == p0.x && this.y == p0.y) {

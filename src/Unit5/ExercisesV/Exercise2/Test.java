@@ -5,6 +5,7 @@ public class Test {
         Exercise e0= new Exercise();
         e0.displaying();
         e0.displayIndexOfFirst00();
+        e0.isPoint11In();
     }
 
 }

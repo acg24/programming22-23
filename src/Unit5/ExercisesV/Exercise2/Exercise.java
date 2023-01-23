@@ -7,8 +7,8 @@ public class Exercise {
     public Exercise(){
         Point p0 = new Point(2,4);
         Point p1 = new Point(4,4);
-        Point p2 = new Point(5,3);
-        Point p3 = new Point(6,7);
+        Point p2 = new Point(0,0);
+        Point p3 = new Point(1,1);
         points.add(p0);
         points.add(p1);
         points.add(p2);
@@ -59,7 +59,7 @@ public class Exercise {
         for (int i = 0; i < points.size(); i++) {
             Point point = points.get(i);
             if (point.compareTo(base) == 0) {
-                System.out.println("The first (0,0) point is at index " + i);
+                System.out.println("The first (0,0) point is at index " + (i+1));
                 return;
             }
         }
@@ -69,14 +69,15 @@ public class Exercise {
         Point base = new Point(1, 1);
         for (int i = 0; i < points.size(); i++) {
             Point point = points.get(i);
-            if (point.compareTo(base) == 0) {
-                System.out.println("The first (0,0) point is at index " + i);
-
+            if (point.equals(base) == true) {
+                System.out.println("The ArrayList contains a (1,1) point.");
+                return true;
             }
         }
-        System.out.println("The ArrayList does not contain any (0,0) point.");
-        return true;
+        System.out.println("The ArrayList does not contain any (1,1) point.");
+        return false;
     }
+    /*
     public boolean isIn11() {
         Iterator<Point> it = points.iterator();
         Point base = new Point(1, 1);
@@ -89,6 +90,14 @@ public class Exercise {
         }
         return isIn;
     }
-
-
+     */
+    public void deletesFirstPointNext00(){
+        for (int i = 0; i < this.points.size(); i++) {
+            Point point = points.get(i);
+            if ((point.getX() <10 || point.getY()<10) || (point.getX() > -10 || point.getY()>-10)){
+                points.remove(i);
+                return;
+            }
+        }
+    }
 }
