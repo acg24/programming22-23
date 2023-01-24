@@ -22,6 +22,9 @@ public class Movie {
             System.out.println("They are not the same movie.");
         }
     }
+    public String getMname(){
+        return this.Mname;
+    }
 
 
 
