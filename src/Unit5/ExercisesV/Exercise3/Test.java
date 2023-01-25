@@ -13,6 +13,7 @@ public class Test {
         c0.addMovie(m2);
         c0.addMovie(m3);
         c0.addMovie(m4);
+        //c0.roomOfMovie("Argo", 60, 2014);
         c0.display();
 
 

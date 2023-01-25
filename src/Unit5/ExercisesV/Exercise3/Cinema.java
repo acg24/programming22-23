@@ -18,40 +18,47 @@ public class Cinema {
         this.occupiedRooms=new Movie[numRooms];
         Arrays.fill(occupiedRooms, null);
     }
+
+    /*
+    =======================================================================================================================================================================
+       -Intro a movie and returns in witch room is it located.
+       -Iterate occupiedRooms.*/
     public void roomOfMovie(String IntroName, int introDuration, int introYear){
         Movie mIntro = new Movie(IntroName, introDuration, introYear);
-        int i=0;
-        Movie obj = movies.get(0);
         boolean isIn=false;
-        while (isIn ==false || i < this.movies.size()){
-            i++;
-            if (mIntro.equals(obj)){
+        int i=0;
+        while (i<occupiedRooms.length && isIn!=true){
+            if (mIntro.isEqual(this.occupiedRooms[i])){
                 System.out.println("The movie is  being projected in the room number" + (i+1));
                 isIn =true;
             }
+            i++;
         }
         if (isIn==false){
             System.out.println("The movie is not in this cinema.");
         }
+
     }
+
+    /*
+    =======================================================================================================================================================================
+       -Intro a movie and add to the first available room.
+       -Iterate occupiedRooms.*/
     public void addMovie(Movie introM){
-        Iterator<Movie> it = movies.iterator();
         boolean isEmpty = false;
-        while(it.hasNext()) {
-            Movie obj = it.next();
-            if (obj==null){
-                obj=introM;
+        boolean isIn=false;
+        int i=0;
+        while (i<occupiedRooms.length && isIn!=true && isEmpty!=true){
+            if (occupiedRooms[i]==null){
                 isEmpty = true;
             }
-        }
-        boolean isIn=false;
-        for (int i = 0; i < this.movies.size(); i++) {
-            Movie obj = movies.get(i);
-            if (introM.equals(obj)){
+            if (introM.equals(occupiedRooms[i])){
                 isIn =true;
             }
+            i++;
         }
         if (isEmpty==true && isIn==false){
+            occupiedRooms[i]=introM;
             System.out.println("The movie is added successfully.");
         }else if (isIn==true){
             System.out.println("The movie is already in this cinema.");
@@ -59,30 +66,44 @@ public class Cinema {
             System.out.println("There are no empty rooms, remove a movie if you want to add another.");
         }
     }
+
+    /*
+    =======================================================================================================================================================================
+       -Intro (a movie and a room) and add the movie to the room.
+       -Iterate occupiedRooms.*/
     public void addMovie(Movie introM, int room){
         room=room-1;
+        boolean isEmpty = false;
         boolean isIn=false;
-        for (int i = 0; i < this.movies.size(); i++) {
-            Movie obj = movies.get(i);
-            if (introM.equals(obj)){
+        int i=0;
+        while (i<occupiedRooms.length && isIn!=true && isEmpty!=true){
+            if (occupiedRooms[i]==null){
+                isEmpty = true;
+            }
+            if (introM.equals(occupiedRooms[i])){
                 isIn =true;
             }
+            i++;
         }
-        if (movies.get(room)==null && isIn==false){
+        if (isEmpty==true && isIn==false){
             movies.add(room , introM);
             System.out.println("The movie is added successfully.");
         }else if (isIn==true){
             System.out.println("The movie is already in this cinema.");
         }else{
-            System.out.println("The room is not empty.");
+            System.out.println("There are no empty rooms, remove a movie if you want to add another.");
         }
     }
+
+    /*
+    =======================================================================================================================================================================
+       -Display the cinema Cname and the name of all the movies that are in a room(the room to).
+       -Iterate occupiedRooms.*/
     public void display(){
         System.out.println(this.Cname + ": ");
-        for (int i = 0; i < this.movies.size(); i++) {
-            Movie obj = movies.get(i);
-            if (movies.get(i)!=null){
-                System.out.println(obj.getMname() + " -Room " + (i+1));
+        for (int i = 0; i < this.occupiedRooms.length; i++) {
+            if (occupiedRooms[i]!=null){
+                System.out.println(occupiedRooms[i].getMname() + " -Room " + (i+1));
             }
         }
     }

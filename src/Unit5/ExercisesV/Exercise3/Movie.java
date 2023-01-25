@@ -14,13 +14,15 @@ public class Movie {
         return ("Name: " + this.Mname + "| Duration: " + this.duration
                 + ", Year: " + this.year);
     }
-    public void isEqual(Movie intro){
+    public Boolean isEqual(Movie intro){
+        Boolean result=false;
         if (this.Mname.equals(intro.Mname) && this.year ==intro.year
                 && (Math.abs(duration-intro.duration)<=5)){
-            System.out.println("They are the same movie.");
+            result=true;
         }else{
-            System.out.println("They are not the same movie.");
+            result=false;
         }
+        return result;
     }
     public String getMname(){
         return this.Mname;
