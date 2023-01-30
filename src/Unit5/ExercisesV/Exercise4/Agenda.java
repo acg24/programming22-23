@@ -68,8 +68,8 @@ public class Agenda {
         System.out.println("============================================================================");
         boolean isIn=false;
         if (entries.containsKey(name)){
+            System.out.print(name + ": ");
             for (int i=0; i<entries.get(name).length;i++){
-                System.out.print(name + ": ");
                 System.out.print(entries.get(name)[i] + ", ");
             }
             System.out.println();
@@ -77,8 +77,20 @@ public class Agenda {
             System.out.println(name + " is not in the agenda");
         }
     }
-    public void numberOfPhones(int num){
-        
+    public void numberOfPhones(String num){
+        int result =0;
+        Iterator<Map.Entry<String,String[]>> it=entries.entrySet().iterator();
+        System.out.println();
+        System.out.println("============================================================================");
+        while (it.hasNext()){
+            Map.Entry<String,String[]> map=(Map.Entry<String,String[]>) it.next();
+            for (int i=0; i<map.getValue().length;i++){
+                if (map.getValue()[i].equals(num)){
+                    result++;
+                }
+            }
+        }            System.out.println("The number " + num + " appears " + result + " times in the agenda.");
+
     }
 
 }
