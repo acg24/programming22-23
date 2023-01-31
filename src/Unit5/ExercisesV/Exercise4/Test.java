@@ -13,12 +13,12 @@ public class Test {
         a0.addEntry("jone", nums2);
         a0.addEntry("mikele", nums3);
         a0.display();
-        a0.addEntry("jon", nums4);
+        a0.addEntry("jon", new String[]{ "55555","88888","66666","77777","22222"});
         a0.display();
         a0.addEntry("iker", nums3);
-        a0.searchName("mikele");
-        a0.searchName("alaine");
-        a0.numberOfPhones("11111");
-        a0.numberOfPhones("22222");
+        System.out.println(a0.searchName("mikele"));
+        System.out.println(a0.searchName("alaine"));
+        System.out.println("The number " + "111111" + " appears " + a0.numberOfPhones("111111") + " times in the agenda.");
+        System.out.println("The number " + "22222" + " appears " + a0.numberOfPhones("22222") + " times in the agenda.");
     }
 }

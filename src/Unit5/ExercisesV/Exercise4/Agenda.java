@@ -15,6 +15,7 @@ public class Agenda {
     =======================================================================================================================================================================
        -Intro (a name and an array with phone numbers) and add it to the agenda.*/
     public void addEntry(String name, String[] nums){
+
         boolean isIn=false;
         int inPer=0;
         if (entries.containsKey(name)){
@@ -32,10 +33,14 @@ public class Agenda {
             System.out.println("============================================================================");
             System.out.println("Your agenda contains these phone number for.");
             System.out.print(name + ":  ");
-            for (int i=0; i<nums.length;i++){
-                System.out.print(nums[i] + ", ");
+            while (it.hasNext()) {
+
+                Map.Entry<String, String[]> map = (Map.Entry<String, String[]>) it.next();
+                inPer++;
+                for (int i = 0; i < entries.get(name).length; i++) {
+                    System.out.print(entries.get(name)[i] + ", ");
+                }
             }
-            System.out.println();
             System.out.println("Want to replace them by new ones?(y/n)");
             String answer = s0.nextLine();
             if (answer.equals("y")){
@@ -63,21 +68,23 @@ public class Agenda {
             System.out.println();
         }
     }
-    public void  searchName(String name){
+    public String  searchName(String name){
+        String result="";
         System.out.println();
         System.out.println("============================================================================");
         boolean isIn=false;
         if (entries.containsKey(name)){
             System.out.print(name + ": ");
             for (int i=0; i<entries.get(name).length;i++){
-                System.out.print(entries.get(name)[i] + ", ");
+                result=result + (entries.get(name)[i] + ", ");
             }
             System.out.println();
         } else if (!entries.containsKey(name)) {
-            System.out.println(name + " is not in the agenda");
+            result = (name + " is not in the agenda");
         }
+        return result;
     }
-    public void numberOfPhones(String num){
+    public int numberOfPhones(String num){
         int result =0;
         Iterator<Map.Entry<String,String[]>> it=entries.entrySet().iterator();
         System.out.println();
@@ -87,10 +94,11 @@ public class Agenda {
             for (int i=0; i<map.getValue().length;i++){
                 if (map.getValue()[i].equals(num)){
                     result++;
+
                 }
             }
-        }            System.out.println("The number " + num + " appears " + result + " times in the agenda.");
-
+        }
+            return result;
     }
 
 }

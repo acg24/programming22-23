@@ -1,4 +1,4 @@
-package Unit5.Exercises1;
+package Unit5.ExercisesI;
 import java.util.Scanner;
 public class Exercise3 {
     public static void main (String[] args){
