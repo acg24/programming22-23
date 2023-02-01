@@ -1,6 +1,5 @@
-package Unit6.ExercisesI.Exercise1;
+package Unit6.ExercisesI.Exercise2;
 
-import java.lang.module.FindException;
 import java.util.Scanner;
 
 public class DivideByZero {
