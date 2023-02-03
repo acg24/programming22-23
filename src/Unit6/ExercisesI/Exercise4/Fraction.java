@@ -11,7 +11,16 @@ public class Fraction {
         System.out.println("=================================================================");
         return ("Function: numerator(" + numer)+ ") denominator(" + denom + ").";
     }
+    /*
+    =======================================================================================================================================================================
+       -Intro a fraction and sum it with this.
+       -Return a Fraction with the result.*/
     public void adding(Fraction introF){
+        Fraction f2 = new Fraction(1, 1);
+        f2.numer=this.numer*introF.denom+introF.numer*this.denom;
+        f2.denom=this.denom*introF.denom;
+        System.out.println(f2.toString());
+        f2.simplify();
     }
     public void subtracting(Fraction introF){
     }
@@ -29,5 +38,7 @@ public class Fraction {
         }
         System.out.println(result);
         return result;
+    }
+    public void prueva(){
     }
 }
