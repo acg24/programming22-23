@@ -44,8 +44,8 @@ public class CopyJPG {
             byte buffer [] = new byte[512];
             int value =0;
             while (value!=-1){
-                value = inStream.read(buffer);
                 outStream.write(buffer);
+                value = inStream.read(buffer);
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
