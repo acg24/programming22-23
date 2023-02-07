@@ -1,36 +1,72 @@
 package Unit7.ExercisesI.Exercise1;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 
 public class CopyJPG {
-    File inputFile = new File("photo.jpg");
-    FileInputStream myFileSt;
-
-    {
+    public static void main(String[] args) {
+        File originalFile = new File("photo.jpg");
+        File newFile = new File("photo_CPY.jpg");
+        FileInputStream inStream=null;
+        FileOutputStream outStream=null;
+/*
         try {
-            myFileSt = new FileInputStream(inputFile);
-            int count = 0;
-            int readbyte = myFileSt.read( );
-            while (readbyte != -1) {
-                if (readbyte == '\n')
-                    count ++;
-                readbyte = myFileSt.read( );
+            inStream = new FileInputStream(originalFile);
+            outStream = new FileOutputStream(newFile);
+            int byte = inStream.read();
+            while (byte != -1) {
+                outStream.write(byte);
+                byte = inStream.read();
             }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        }finally {
-            if ( myFileSt!=null){
+        } finally {
+            if (inStream != null) {
                 try {
-                    myFileSt.close();
+                    inStream.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (outStream != null) {
+                try {
+                    outStream.close();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
             }
         }
+*/
+        try {
+            inStream = new FileInputStream(originalFile);
+            outStream = new FileOutputStream(newFile);
+            byte buffer [] = new byte[512];
+            int value =0;
+            while (value!=-1){
+                value = inStream.read(buffer);
+                outStream.write(buffer);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (inStream != null) {
+                try {
+                    inStream.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+            if (outStream != null) {
+                try {
+                    outStream.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+
     }
-
-
 }
