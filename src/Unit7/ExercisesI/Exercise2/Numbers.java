@@ -71,8 +71,12 @@ public class Numbers {
     }
     public static void displayFile(DataInputStream dis){
         List<Integer> result = new ArrayList<Integer>();
+        int num=0;
         try {
-            System.out.println(dis.read());
+            num = dis.readChar();
+
+                System.out.println(num);
+
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -89,10 +93,36 @@ public class Numbers {
     }
 
     public static void main(String[] args) {
-  //      add1Num("Unit7_ExercisesI_Exercise2.txt", 5);
+
         System.out.println(generate1Num(1,3));
         System.out.println("=============================================");
-        System.out.println(generateNums(4,5,3));
 
+
+
+        System.out.println(generateNums(1,5,3));
+        System.out.println("=============================================");
+
+
+        System.out.println("Adding 5, 6, 7");
+        add1Num("Unit7_ExercisesI_Exercise2.txt", 5);
+        add1Num("Unit7_ExercisesI_Exercise2.txt", 6);
+        add1Num("Unit7_ExercisesI_Exercise2.txt", 7);
+
+        System.out.println("=============================================");
+        DataInputStream dis = null;
+        try {
+            dis =new DataInputStream(new FileInputStream("Unit7_ExercisesI_Exercise2.txt"));
+            displayFile(dis);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } finally {
+            if (dis != null){
+                try {
+                    dis.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
     }
 }
