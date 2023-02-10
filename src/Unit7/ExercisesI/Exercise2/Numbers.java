@@ -22,7 +22,7 @@ public class Numbers {
         try {
              dos =new DataOutputStream
                     (new FileOutputStream(fileName, true));
-            dos.write(num);
+             dos.write(num);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -37,9 +37,9 @@ public class Numbers {
             }
         }
     }
-    public static void addNumbers(String fileName, int[] nums){
-        for (int i=0; i<nums.length;i++){
-            add1Num(fileName, nums[i]);
+    public static void addNumbers(String fileName, List<Integer> nums){
+        for (int i=0; i<nums.size();i++){
+            add1Num(fileName, nums.get(i));
         }
     }
     public static int findInFile(String fileName, int pos){
@@ -70,15 +70,19 @@ public class Numbers {
         return occupying;
     }
     public static void displayFile(DataInputStream dis){
-        List<Integer> result = new ArrayList<Integer>();
-        int num=0;
+        int num;
         try {
-            num = dis.readChar();
+            while(dis.available()>0) {
 
-                System.out.println(num);
+                // read four bytes from data input, return int
+                int k = dis.readInt();
 
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+                // print int
+                System.out.print(k+" ");
+            }
+           /* while((num = dis.readInt()) != -1){
+                System.out.print(num + ", ");
+            }*/
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
@@ -93,32 +97,48 @@ public class Numbers {
     }
 
     public static void main(String[] args) {
-
-        System.out.println(generate1Num(1,3));
-        System.out.println("=============================================");
-
-
-
-        System.out.println(generateNums(1,5,3));
-        System.out.println("=============================================");
-
-
-        System.out.println("Adding 5, 6, 7");
-        add1Num("Unit7_ExercisesI_Exercise2.txt", 5);
-        add1Num("Unit7_ExercisesI_Exercise2.txt", 6);
-        add1Num("Unit7_ExercisesI_Exercise2.txt", 7);
-
-        System.out.println("=============================================");
-        DataInputStream dis = null;
+        System.out.println("1_=============================================");
+        List<Integer> nums0 = new ArrayList<Integer>();
+        nums0.add(1);
+        nums0.add(2);
+        nums0.add(3);
+        nums0.add(4);
+        addNumbers("file1.bin", nums0);
+        System.out.println("2_=============================================");
+        int num1=generate1Num(1,5);
+        add1Num("file1.bin", num1);
+        System.out.println("3_=============================================");
+        addNumbers("file1.bin", generateNums(1,4,5));
+        System.out.println("4_=============================================");
+        List<Integer> dis = new ArrayList<Integer>();
+        DataInputStream dis0 = null;
         try {
-            dis =new DataInputStream(new FileInputStream("Unit7_ExercisesI_Exercise2.txt"));
-            displayFile(dis);
+            dis0 = new DataInputStream(new FileInputStream("file1.bin"));
+            displayFile(dis0);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
-        } finally {
-            if (dis != null){
+        }finally {
+            if (dis0!= null){
                 try {
-                    dis.close();
+                    dis0.close();
+                    System.out.println();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+        System.out.println("5_=============================================");
+        DataInputStream dis1 = null;
+        try {
+            dis1 = new DataInputStream(new FileInputStream("file1.bin"));
+            displayFile(dis1);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }finally {
+            if (dis1!= null){
+                try {
+                    dis0.close();
+                    System.out.println();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
