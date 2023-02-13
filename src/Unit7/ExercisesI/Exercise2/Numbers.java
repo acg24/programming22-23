@@ -112,7 +112,7 @@ public class Numbers {
             }
         }
         System.out.println("5_=============================================");
-        DataInputStream dis1 = null;
+        /*DataInputStream dis1 = null;
         try {
             dis1 = new DataInputStream(new FileInputStream("file1.bin"));
             displayFile(dis1);
@@ -127,7 +127,7 @@ public class Numbers {
                     throw new RuntimeException(e);
                 }
             }
-        }
+        }*/
         System.out.println("6_=============================================");
         System.out.println("7_=============================================");
         System.out.println("8_=============================================");
