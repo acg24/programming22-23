@@ -22,7 +22,7 @@ public class Numbers {
         try {
              dos =new DataOutputStream
                     (new FileOutputStream(fileName, true));
-             dos.write(num);
+             dos.writeInt(num);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
@@ -39,7 +39,7 @@ public class Numbers {
     }
     public static void addNumbers(String fileName, List<Integer> nums){
         for (int i=0; i<nums.size();i++){
-            add1Num(fileName, nums.get(i));
+            add1Num(fileName, (int)nums.get(i));
         }
     }
     public static int findInFile(String fileName, int pos){
@@ -53,6 +53,7 @@ public class Numbers {
             while (find==false || aux<pos){
                 occupying=dis.read();
                 aux++;
+                find=true;
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
@@ -70,29 +71,12 @@ public class Numbers {
         return occupying;
     }
     public static void displayFile(DataInputStream dis){
-        int num;
         try {
-            while(dis.available()>0) {
-
-                // read four bytes from data input, return int
-                int k = dis.readInt();
-
-                // print int
-                System.out.print(k+" ");
+           while(dis.available()>0){
+                System.out.print((int)dis.readInt() + ", ");
             }
-           /* while((num = dis.readInt()) != -1){
-                System.out.print(num + ", ");
-            }*/
         } catch (IOException e) {
-            throw new RuntimeException(e);
-        } finally {
-            try {
-                if (dis!=null){
-                    dis.close();
-                }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            System.out.println("Error reading.");
         }
     }
 
@@ -144,5 +128,9 @@ public class Numbers {
                 }
             }
         }
+        System.out.println("6_=============================================");
+        System.out.println("7_=============================================");
+        System.out.println("8_=============================================");
+        System.out.println("9_=============================================");
     }
 }
