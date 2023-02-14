@@ -166,12 +166,25 @@ public class EmployeesManager implements Serializable {
         el0.add(e3);
         el0.add(e4);
         EmployeesManager em0=new EmployeesManager("employees.data");
+        System.out.println("================================================================================");
+        System.out.println("Saving employees");
         em0.saveEmployees(el0);
+        System.out.println("================================================================================");
+        System.out.println("Searching employee: xxxx");
         em0.searchEmployee("xxxx");
+        System.out.println("================================================================================");
+        System.out.println("Searching employee: yyyy");
         em0.searchEmployee("yyyy");//non-existing name
+        System.out.println("================================================================================");
+        System.out.println("Displaying");
         em0.displayEmployees();
+        System.out.println("================================================================================");
+        System.out.println("working all");
         em0.workEveryone();
+        System.out.println("================================================================================");
+        System.out.println("Displaying");
         em0.displayEmployees();
 
     }
+
 }

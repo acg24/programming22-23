@@ -1,6 +1,8 @@
 package Unit7.ExercisesI.Exercise3;
 
-public class MobilePhone {
+import java.io.Serializable;
+
+public class MobilePhone implements Serializable {
     private String number;
     private double credit; /*saldo*/
     public MobilePhone(String n, double c){

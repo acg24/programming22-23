@@ -1,6 +1,11 @@
 package Unit7.ExercisesI.Exercise3;
 
-public class Employee {
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+public class Employee implements Serializable {
     private String name;
     private double salary;
     private MobilePhone phone;
@@ -35,4 +40,5 @@ public class Employee {
     public MobilePhone getPhone() {
         return this.phone;
     }
+
 }
