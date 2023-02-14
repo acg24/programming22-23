@@ -26,4 +26,7 @@ public class Employee {
         this.salary=this.salary+g;
         this.phone.call(m);
     }
+    public String getName(){
+        return this.name;
+    }
 }
