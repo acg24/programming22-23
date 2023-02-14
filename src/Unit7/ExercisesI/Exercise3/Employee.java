@@ -26,7 +26,13 @@ public class Employee {
         this.salary=this.salary+g;
         this.phone.call(m);
     }
+    /*
+  =======================================================================================================================================================================
+     - Geters.*/
     public String getName(){
         return this.name;
+    }
+    public MobilePhone getPhone() {
+        return this.phone;
     }
 }

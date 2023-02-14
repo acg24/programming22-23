@@ -22,4 +22,10 @@ public class MobilePhone {
     public void call(int minutes){
         this.credit= this.credit-(minutes*2);
     }
+    /*
+  =======================================================================================================================================================================
+     - Geters.*/
+    public void setCredit(double newCredit){
+        this.credit=newCredit;
+    }
 }
