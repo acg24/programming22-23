@@ -15,7 +15,7 @@ public class Employee implements Serializable {
         this.phone=mp;
     }
     public void display(){
-        System.out.println("[ Name: " + this.name + "Salary: " + this.salary + "Mobile phone: " + this.phone +" ]" );
+        System.out.println("[ Name: " + this.name + " | Salary: " + this.salary + " | Mobile phone: " + this.phone.toString() +" ]" );
     }
     /*
   =======================================================================================================================================================================

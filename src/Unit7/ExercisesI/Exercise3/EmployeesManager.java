@@ -45,7 +45,12 @@ public class EmployeesManager implements Serializable {
         try {
             fileIn = new FileInputStream(this.filename);
             input= new ObjectInputStream(fileIn);
-            Employee employee=(Employee) input.readObject();
+
+            while (fileIn.available()>0){
+                Employee employee=(Employee) input.readObject();
+                employee.display();
+            }
+
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {

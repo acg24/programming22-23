@@ -12,6 +12,9 @@ public class MobilePhone implements Serializable {
     public void display(){
         System.out.println("[ Number: " + this.number + "Credit: " + this.credit + " ]" );
     }
+    public String toString(){
+        return ("[ Number: " + this.number + "Credit: " + this.credit + " ]" );
+    }
     /*
   =======================================================================================================================================================================
      - Increments the money of the MovilePhone in s.*/
