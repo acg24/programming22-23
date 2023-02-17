@@ -8,21 +8,20 @@ public class Exercise {
         Scanner s0 = new Scanner(System.in);
         System.out.println("Intro a number:");
         int num0= s0.nextInt();
-        DataOutputStream dos=null;
+        FileWriter fw =null;
 
         try {
-            dos =new DataOutputStream(new FileOutputStream("nums.bin", true));
-            FileReader f1=new FileReader(new File("nums.bin"));
-            dos.writeInt(num0);
+            fw = new FileWriter("nums.bin");
+            fw.write(num0);
 
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         } finally {
-            if (dos!=null){
+            if (fw!=null){
                 try {
-                    dos.close();
+                    fw.close();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
