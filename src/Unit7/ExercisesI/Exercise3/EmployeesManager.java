@@ -70,17 +70,18 @@ public class EmployeesManager implements Serializable {
     /*
   =======================================================================================================================================================================
      - returns the first employee of the file with "empname" sa name .*/
-    public void searchEmployee(String empname){
+    public Employee searchEmployee(String empname){
         FileInputStream fileIn= null;
         ObjectInputStream input=null;
         boolean find=false;
+        Employee result = null;
         try {
             fileIn = new FileInputStream(this.filename);
             input= new ObjectInputStream(fileIn);
             while (fileIn.available()>0 && find!=true){
                 Employee employee=(Employee) input.readObject();
-                if (employee.equals(empname)){
-                    System.out.println(employee.getName());
+                if (employee.getName().equals(empname)){
+                    result = employee;
                     find=true;
                 }
             }
@@ -102,10 +103,35 @@ public class EmployeesManager implements Serializable {
                 }
             }
         }
+        return result;
     } /*
   =======================================================================================================================================================================
      - npi de lo que hay que hacer aqui.*/
     public void generateMobilesFile(String filname){
+        FileInputStream fileIn= null;
+        ObjectInputStream input=null;
+        FileOutputStream fileOut= null;
+        ObjectOutputStream output=null;
+
+        try {
+            fileIn = new FileInputStream(this.filename);
+            input= new ObjectInputStream(fileIn);
+            fileOut = new FileOutputStream(new File("mobilePhone.data"));
+            output= new ObjectOutputStream(fileOut);
+            while (fileIn.available()>0) {
+                Employee e=(Employee) input.readObject();
+                MobilePhone mp = e.getPhone();
+                mp.setCredit(0);
+                System.out.println(mp.getNumber());
+                output.writeObject(e);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
 
     }
     /*
@@ -176,13 +202,16 @@ public class EmployeesManager implements Serializable {
         em0.saveEmployees(el0);
         System.out.println("================================================================================");
         System.out.println("Searching employee: xxxx");
-        em0.searchEmployee("xxxx");
+        System.out.println(em0.searchEmployee("xxxx"));
         System.out.println("================================================================================");
         System.out.println("Searching employee: yyyy");
-        em0.searchEmployee("yyyy");//non-existing name
+        System.out.println(em0.searchEmployee("yyyy"));
         System.out.println("================================================================================");
         System.out.println("Displaying");
         em0.displayEmployees();
+        System.out.println("================================================================================");
+        System.out.println("mobile phones:");
+        em0.generateMobilesFile("employees.data");
         System.out.println("================================================================================");
         System.out.println("working all");
         em0.workEveryone();

@@ -45,7 +45,7 @@ public class Exercise_buffered {
         try {
             br = new BufferedReader(new FileReader("file1.bin"));
             bw = new BufferedWriter(new FileWriter("file1.text"));
-            
+
             String result= br.readLine();
             String[] array = result.split(" ");
 
