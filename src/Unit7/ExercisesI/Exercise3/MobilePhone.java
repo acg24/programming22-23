@@ -10,10 +10,10 @@ public class MobilePhone implements Serializable {
         this.credit=c;
     }
     public void display(){
-        System.out.println("[ Number: " + this.number + "Credit: " + this.credit + " ]" );
+        System.out.println("[ Number: " + this.number + " | Credit: " + this.credit + " ]" );
     }
     public String toString(){
-        return ("[ Number: " + this.number + "Credit: " + this.credit + " ]" );
+        return ("[ Number: " + this.number + " | Credit: " + this.credit + " ]" );
     }
     /*
   =======================================================================================================================================================================
