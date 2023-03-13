@@ -28,6 +28,7 @@ public class Milestone1_2 {
         frame0.add(east, BorderLayout.EAST);
         JPanel ePanel = new JPanel();
         ePanel.setLayout(new BoxLayout(ePanel, BoxLayout.Y_AXIS));
+        ePanel.setPreferredSize(new Dimension(100,250));
         east.add(ePanel);
         ButtonGroup grupo1 = new ButtonGroup();
         JRadioButton jrb0=new JRadioButton("OPT 1",true);
@@ -48,17 +49,17 @@ public class Milestone1_2 {
 
             center.add(new JLabel(new ImageIcon ("./src/Swing/Milestones/1.png")));
         }
-//("./src/Swing/Milestones/1.png")
     }
     public static void down(JFrame frame0){
         JPanel south = new JPanel();
         south.setLayout(new BoxLayout(south, BoxLayout.X_AXIS));
         frame0.add(south, BorderLayout.SOUTH);
         JPanel sPanel = new JPanel();
-        sPanel.setLayout(new FlowLayout());
+        sPanel.setPreferredSize(new Dimension(600,50));
+        sPanel.setLayout(new BoxLayout(sPanel, BoxLayout.X_AXIS));
         south.add(sPanel);
-        south.add(new JButton("But1"));
-        south.add(new JButton("But2"));
+        sPanel.add(new JButton("But1"));
+        sPanel.add(new JButton("But2"));
     }
 
     public static void showFrame(){
